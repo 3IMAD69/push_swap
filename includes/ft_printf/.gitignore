@@ -1,7 +1,7 @@
+a.out
 # Prerequisites
 *.d
-.vscode
-.DS_Store
+
 # Object files
 *.o
 *.ko
@@ -51,3 +51,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# End of https://mrkandreev.name/snippets/gitignore-generator/#C
