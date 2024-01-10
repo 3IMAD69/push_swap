@@ -1,7 +1,7 @@
 
 
 
-SRCM	= main.c
+SRCM	= main.c parsing.c list_utils.c
 OBJM	= ${SRCM:.c=.o}
 
 NAME = push_swap
@@ -26,3 +26,6 @@ fclean : clean
 
 re : fclean all
 	
+
+run : 
+	./push_swap 47546 4884 95699 112
