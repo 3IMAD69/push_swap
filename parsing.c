@@ -61,3 +61,17 @@ void	check_for_error(char **str)
 		i++;
 	}
 }
+
+int is_list_sorted(t_stack *lst)
+{
+	t_stack *next;
+
+	while (lst->next)
+	{
+		next = lst->next;
+		if(lst->value > next->value)
+			return (0);
+		lst = lst->next;
+	}
+	return (1);
+}

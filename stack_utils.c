@@ -147,3 +147,4 @@ void rrr(t_stack **lst_a,t_stack **lst_b)
 
 
 
+

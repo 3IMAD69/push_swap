@@ -1,7 +1,7 @@
 
 
 
-SRCM	= main.c parsing.c list_utils.c stack_utils.c
+SRCM	= main.c parsing.c list_utils.c stack_utils.c sort_algo.c
 OBJM	= ${SRCM:.c=.o}
 
 NAME = push_swap

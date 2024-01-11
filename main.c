@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/11 13:52:55 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/11 17:00:52 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,13 @@ int	main(int argc, char **argv)
 	check_for_error(str);
 	while (str[size] != NULL)
 		size++;
-	printf("size of stack %d\n", size);
 	fill_stack(str, &stack_a, size);
+	if (is_list_sorted(stack_a) && free_list(&stack_a))
+		return (0);
 	print_stack(stack_a);
-	rra(&stack_a,1);
+	main_algo(&stack_a,&stack_b);
 	printf("************************after************************\n");
 	print_stack(stack_a);
+	
 	// system("leaks push_swap");
 }
