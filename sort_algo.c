@@ -56,6 +56,6 @@ void sort_three(t_stack **lst_a)
 void main_algo(t_stack **lst_a, t_stack **lst_b)
 {
     (void)lst_b;
-    if (list_size(*lst_a) <= 5)
+    if (list_size(*lst_a) <= 3)
         sort_three(lst_a);
 }
