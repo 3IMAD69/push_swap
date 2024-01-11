@@ -1,18 +1,18 @@
 #include "push.h"
 
-void print_error(char *str)
+void	print_error(char *str)
 {
-    ft_putstr_fd("Error\n", 2);
-    write(2,str,ft_strlen(str));
-	//system("leaks push_swap");
-    exit(0);
+	ft_putstr_fd("Error\n", 2);
+	write(2, str, ft_strlen(str));
+	// system("leaks push_swap");
+	exit(0);
 }
 
 long long	ft_new_atoi(const char *str)
 {
-	int	i;
+	int			i;
 	long long	res;
-	int	sign;
+	int			sign;
 
 	i = 0;
 	res = 0;
@@ -46,9 +46,9 @@ int	free_tab(char **tab)
 	return (1);
 }
 
-void check_for_error(char **str)
+void	check_for_error(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -59,6 +59,5 @@ void check_for_error(char **str)
 			print_error("Invalid Argument Type");
 		}
 		i++;
-	}	
+	}
 }
-

@@ -1,7 +1,7 @@
 
 
 
-SRCM	= main.c parsing.c list_utils.c
+SRCM	= main.c parsing.c list_utils.c stack_utils.c
 OBJM	= ${SRCM:.c=.o}
 
 NAME = push_swap
@@ -28,4 +28,4 @@ re : fclean all
 	
 
 run : 
-	./push_swap 47546 4884 95699 112
+	./push_swap 7 4 2 3
