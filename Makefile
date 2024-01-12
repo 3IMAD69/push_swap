@@ -29,3 +29,12 @@ re : fclean all
 
 run : 
 	./push_swap 7 4 2 3
+
+#make status arg="4 5 2"
+status : 
+	./push_swap $(arg) | ./checker_Mac $(arg)
+
+
+#make count arg="34 2 1"
+count : 
+	./push_swap $(arg) | wc -l
