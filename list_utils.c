@@ -1,7 +1,7 @@
 
 #include "push.h"
 
-t_stack	*create_new(int value, int index, int is_after_middle)
+t_stack	*create_new(int value, int index)
 {
 	t_stack	*new;
 
@@ -10,8 +10,6 @@ t_stack	*create_new(int value, int index, int is_after_middle)
 		return (NULL);
 	new->value = value;
 	new->index = index;
-	new->is_after_middle = is_after_middle;
-	new->cost = 0;
 	new->next = NULL;
 	return (new);
 }
@@ -79,7 +77,7 @@ void	print_stack(t_stack *lst)
 
     while (lst)
     {
-        printf("| %-10d | %-5d | %-12s | %-5d |\n", lst->value, lst->index, lst->is_after_middle ? "Yes" : "No", lst->cost);
+        printf("| %-10d | %-5d | %-12s |\n", lst->value, lst->index, lst->is_after_middle ? "Yes" : "No");
         lst = lst->next;
     }
     printf("\n");

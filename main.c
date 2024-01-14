@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/12 10:13:39 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/14 18:44:44 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,15 @@ int	check_for_double(t_stack *lst)
 	return (0);
 }
 
-void	fill_stack(char **str, t_stack **stack_a, int size)
+void	fill_stack(char **str, t_stack **stack_a)
 {
 	t_stack	*new;
 	int		i;
-	int		middle;
 
 	i = 0;
 	while (str[i])
 	{
-		middle = 0;
-		if (i >= (size / 2))
-			middle = 1;
-		new = create_new(ft_new_atoi(str[i]), i, middle);
+		new = create_new(ft_new_atoi(str[i]), i);
 		add_back(stack_a, new);
 		if (check_for_double(*stack_a) == 1 && free_tab(str)
 			&& free_list(stack_a))
@@ -57,9 +53,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	char	**str;
-	int		size;
 
-	size = 0;
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2 || (argc == 2 && !argv[1][0]))
@@ -69,15 +63,14 @@ int	main(int argc, char **argv)
 	else
 		str = allocate_str(argv, argc);
 	check_for_error(str);
-	while (str[size] != NULL)
-		size++;
-	fill_stack(str, &stack_a, size);
+	fill_stack(str, &stack_a);
 	if (is_list_sorted(stack_a) && free_list(&stack_a))
 		return (0);
 	// print_stack(stack_a);
-	main_algo(&stack_a,&stack_b);
-	// printf("************************after************************\n");
-	// print_stack(stack_a);
+	  main_algo(&stack_a,&stack_b);
+	//   print_stack(stack_b);
+	//   printf("************************after************************\n");
+	//   print_stack(stack_a);
 	
 	// system("leaks push_swap");
 }

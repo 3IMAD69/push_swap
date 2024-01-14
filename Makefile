@@ -1,7 +1,7 @@
 
 
 
-SRCM	= main.c parsing.c list_utils.c stack_utils.c sort_algo.c
+SRCM	= main.c parsing.c list_utils.c stack_utils.c sort_algo.c shark_sort.c
 OBJM	= ${SRCM:.c=.o}
 
 NAME = push_swap
@@ -27,8 +27,8 @@ fclean : clean
 re : fclean all
 	
 
-run : 
-	./push_swap 7 4 2 3
+run :  
+	./push_swap 42 140 61 52 104 45 71 55 9 
 
 #make status arg="4 5 2"
 status : 
