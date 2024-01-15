@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:03:35 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 14:09:04 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/15 17:05:01 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	pa(t_stack **lst_a, t_stack **lst_b)
 	if (!lst_b)
 		return ;
 	push_any(lst_a, lst_b);
-	printf("pa\n");
+	ft_printf("pa\n");
 }
 
 void	pb(t_stack **lst_a, t_stack **lst_b)
@@ -36,5 +36,5 @@ void	pb(t_stack **lst_a, t_stack **lst_b)
 	if (!lst_a)
 		return ;
 	push_any(lst_b, lst_a);
-	printf("pb\n");
+	ft_printf("pb\n");
 }

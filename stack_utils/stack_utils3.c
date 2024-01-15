@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:57:39 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 14:09:01 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/15 17:04:52 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ra(t_stack **lst_a, int is_print)
 		return ;
 	rotate_any(lst_a);
 	if (is_print)
-		printf("ra\n");
+		ft_printf("ra\n");
 }
 
 void	rb(t_stack **lst_b, int is_print)
@@ -41,12 +41,12 @@ void	rb(t_stack **lst_b, int is_print)
 		return ;
 	rotate_any(lst_b);
 	if (is_print)
-		printf("rb\n");
+		ft_printf("rb\n");
 }
 
 void	rr(t_stack **lst_b, t_stack **lst_a)
 {
 	ra(lst_a, 0);
 	rb(lst_b, 0);
-	printf("rr\n");
+	ft_printf("rr\n");
 }

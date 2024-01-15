@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:06:49 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 14:08:53 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/15 17:04:33 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	sa(t_stack **lst, int is_print)
 		return ;
 	swap_any(lst);
 	if (is_print)
-		printf("sa\n");
+		ft_printf("sa\n");
 }
 
 void	sb(t_stack **lst, int is_print)
@@ -36,12 +36,12 @@ void	sb(t_stack **lst, int is_print)
 		return ;
 	swap_any(lst);
 	if (is_print)
-		printf("sb\n");
+		ft_printf("sb\n");
 }
 
 void	ss(t_stack **lst_a, t_stack **lst_b)
 {
 	sa(lst_a, 0);
 	sb(lst_b, 0);
-	printf("ss\n");
+	ft_printf("ss\n");
 }

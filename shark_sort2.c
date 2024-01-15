@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:39:46 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 16:43:08 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/15 17:02:34 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,5 @@ void	shark_sort(t_stack **lst_a, t_stack **lst_b)
 	main_shark_algo(&chunk, lst_a, lst_b);
 	initiate_index(lst_b);
 	go_back_to_a(lst_a, lst_b);
+	free(chunk.sorted_arr);
 }

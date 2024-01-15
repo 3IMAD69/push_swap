@@ -7,7 +7,7 @@ OBJM	= ${SRCM:.c=.o}
 
 NAME = push_swap
 
-CFLAGS	= -Wall -Werror -Wextra -g -fsanitize=address 
+CFLAGS	= -Wall -Werror -Wextra #-g -fsanitize=address 
 CC		= cc
 LIBFTA 	= ./includes/libft/libft.a
 
