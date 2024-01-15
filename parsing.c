@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 13:41:36 by idhaimy           #+#    #+#             */
+/*   Updated: 2024/01/15 13:41:38 by idhaimy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push.h"
 
 void	print_error(char *str)
 {
 	ft_putstr_fd("Error\n", 2);
 	write(2, str, ft_strlen(str));
-	// system("leaks push_swap");
 	exit(0);
 }
 
@@ -25,6 +36,8 @@ long long	ft_new_atoi(const char *str)
 			sign = sign * -1;
 		i++;
 	}
+	if (str[i] < '0' || str[i] > '9')
+		return (2147483650);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = (res * 10) + (str[i] - 48);
@@ -62,14 +75,14 @@ void	check_for_error(char **str)
 	}
 }
 
-int is_list_sorted(t_stack *lst)
+int	is_list_sorted(t_stack *lst)
 {
-	t_stack *next;
+	t_stack	*next;
 
 	while (lst->next)
 	{
 		next = lst->next;
-		if(lst->value > next->value)
+		if (lst->value > next->value)
 			return (0);
 		lst = lst->next;
 	}

@@ -1,7 +1,8 @@
 
 
 
-SRCM	= main.c parsing.c list_utils.c stack_utils.c sort_algo.c shark_sort.c
+SRCM	= main.c parsing.c list_utils.c sort_algo.c shark_sort.c shark_sort2.c list_utils2.c sort_algo_helper.c \
+	 	   stack_utils/stack_utils.c stack_utils/stack_utils2.c stack_utils/stack_utils3.c stack_utils/stack_utils4.c
 OBJM	= ${SRCM:.c=.o}
 
 NAME = push_swap
@@ -38,3 +39,7 @@ status :
 #make count arg="34 2 1"
 count : 
 	./push_swap $(arg) | wc -l
+
+test : 
+	make
+	bash push_swap_test.sh
