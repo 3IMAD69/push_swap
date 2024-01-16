@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:41:36 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 13:41:38 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/16 15:03:40 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	print_error(char *str)
 {
 	ft_putstr_fd("Error\n", 2);
 	write(2, str, ft_strlen(str));
-	exit(0);
+	exit(1);
 }
 
 long long	ft_new_atoi(const char *str)

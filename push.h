@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:44:04 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 16:17:17 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/16 12:05:57 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,15 @@ typedef struct s_chunk
 	int				end;
 	int				*sorted_arr;
 }					t_chunk;
+
+typedef struct s_bonus
+{
+	t_stack	*stack_a;
+	t_stack	*stack_b;
+	char	**str;
+	char 	*commands[12];
+	char 	*buffer;
+}				t_bonus;
 
 long long			ft_new_atoi(const char *str);
 void				print_error(char *str);

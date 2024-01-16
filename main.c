@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 17:02:57 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/16 10:23:19 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ int	main(int argc, char **argv)
 	//   print_stack(stack_b);
 	// printf("************************after************************\n");
 	// print_stack(stack_a);
-	system("leaks push_swap");
+	//system("leaks push_swap");
 }
