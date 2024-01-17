@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:44:15 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 14:44:24 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:44:36 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	sort_four_helper(t_stack **lst_a, t_stack **lst_b)
 {
 	if (is_list_sorted(*lst_a))
 		return ;
-	pb(lst_a, lst_b);
+	pb(lst_a, lst_b, 1);
 	initiate_index(lst_a);
 	sort_three(lst_a);
-	pa(lst_a, lst_b);
+	pa(lst_a, lst_b, 1);
 }
 
 void	sort_four(t_stack **lst_a, t_stack **lst_b)
@@ -51,10 +51,10 @@ void	sort_five_helper(t_stack **lst_a, t_stack **lst_b)
 {
 	if (is_list_sorted(*lst_a))
 		return ;
-	pb(lst_a, lst_b);
+	pb(lst_a, lst_b, 1);
 	initiate_index(lst_a);
 	sort_four(lst_a, lst_b);
-	pa(lst_a, lst_b);
+	pa(lst_a, lst_b, 1);
 }
 
 void	sort_five(t_stack **lst_a, t_stack **lst_b)

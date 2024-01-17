@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:44:04 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/16 12:05:57 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:27:07 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ typedef struct s_chunk
 
 typedef struct s_bonus
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	char	**str;
-	char 	*commands[12];
-	char 	*buffer;
-}				t_bonus;
+	t_stack			*stack_a;
+	t_stack			*stack_b;
+	char			**str;
+	char			*commands[12];
+	char			*buffer;
+}					t_bonus;
 
 long long			ft_new_atoi(const char *str);
 void				print_error(char *str);
@@ -67,18 +67,18 @@ void				sort_four_helper(t_stack **lst_a, t_stack **lst_b);
 
 void				sa(t_stack **lst, int is_print);
 void				sb(t_stack **lst, int is_print);
-void				ss(t_stack **lst_a, t_stack **lst_b);
+void				ss(t_stack **lst_a, t_stack **lst_b, int is_print);
 
-void				pa(t_stack **lst_a, t_stack **lst_b);
-void				pb(t_stack **lst_a, t_stack **lst_b);
+void				pa(t_stack **lst_a, t_stack **lst_b, int is_print);
+void				pb(t_stack **lst_a, t_stack **lst_b, int is_print);
 
 void				ra(t_stack **lst_a, int is_print);
 void				rb(t_stack **lst_b, int is_print);
-void				rr(t_stack **lst_b, t_stack **lst_a);
+void				rr(t_stack **lst_b, t_stack **lst_a, int print);
 
 void				rra(t_stack **lst_a, int is_print);
 void				rrb(t_stack **lst_b, int is_print);
-void				rrr(t_stack **lst_a, t_stack **lst_b);
+void				rrr(t_stack **lst_a, t_stack **lst_b, int is_print);
 
 void				main_algo(t_stack **lst_a, t_stack **lst_b);
 void				shark_sort(t_stack **lst_a, t_stack **lst_b);
@@ -89,4 +89,9 @@ void				go_back_to_a(t_stack **lst_a, t_stack **lst_b);
 t_stack				*get_node_max(t_stack **lst_b);
 void				fill_and_sort_arr(t_chunk *chunk, t_stack **lst_a);
 int					get_range(int size);
+
+void				print_checker_error(void);
+int					check_for_double(t_stack *lst);
+void				init_commands(char **commands);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:03:35 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 17:05:01 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:44:59 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,20 @@ void	push_any(t_stack **lst1, t_stack **lst2)
 	add_front(lst1, tmp);
 }
 
-void	pa(t_stack **lst_a, t_stack **lst_b)
+void	pa(t_stack **lst_a, t_stack **lst_b, int is_print)
 {
-	if (!lst_b)
+	if (!lst_b || list_size(*lst_b) < 1)
 		return ;
 	push_any(lst_a, lst_b);
-	ft_printf("pa\n");
+	if (is_print)
+		ft_printf("pa\n");
 }
 
-void	pb(t_stack **lst_a, t_stack **lst_b)
+void	pb(t_stack **lst_a, t_stack **lst_b, int is_print)
 {
-	if (!lst_a)
+	if (!lst_a || list_size(*lst_a) < 1)
 		return ;
 	push_any(lst_b, lst_a);
-	ft_printf("pb\n");
+	if (is_print)
+		ft_printf("pb\n");
 }

@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:39:46 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 17:02:34 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:44:23 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void	go_back_to_a(t_stack **lst_a, t_stack **lst_b)
 		{
 			while ((*lst_b)->value != max->value)
 				rrb(lst_b, 1);
-			pa(lst_a, lst_b);
+			pa(lst_a, lst_b, 1);
 		}
 		else
 		{
 			while ((*lst_b)->value != max->value)
 				rb(lst_b, 1);
-			pa(lst_a, lst_b);
+			pa(lst_a, lst_b, 1);
 		}
 		i++;
 		initiate_index(lst_b);
@@ -58,14 +58,14 @@ void	main_shark_algo(t_chunk *chunk, t_stack **lst_a, t_stack **lst_b)
 	{
 		if ((*lst_a)->value <= chunk->sorted_arr[chunk->start])
 		{
-			pb(lst_a, lst_b);
+			pb(lst_a, lst_b, 1);
 			rb(lst_b, 1);
 			increment_chunk_size(chunk, size);
 		}
 		else if ((*lst_a)->value > chunk->sorted_arr[chunk->start]
 			&& (*lst_a)->value <= chunk->sorted_arr[chunk->end])
 		{
-			pb(lst_a, lst_b);
+			pb(lst_a, lst_b, 1);
 			if (list_size((*lst_b)) && (*lst_b)->next
 				&& (*lst_b)->value < (*lst_b)->next->value)
 				sb(lst_b, 1);

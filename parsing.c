@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:41:36 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/16 15:03:40 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/17 11:44:12 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,11 @@ void	check_for_error(char **str)
 	int	i;
 
 	i = 0;
+	if (!str[i])
+	{
+		free_tab(str);
+		print_error("");
+	}
 	while (str[i])
 	{
 		if (ft_new_atoi(str[i]) > INT_MAX || ft_new_atoi(str[i]) < INT_MIN)

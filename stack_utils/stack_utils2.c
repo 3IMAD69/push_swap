@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:49:25 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 17:04:44 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/16 16:54:16 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,10 @@ void	rrb(t_stack **lst_b, int is_print)
 		ft_printf("rrb\n");
 }
 
-void	rrr(t_stack **lst_a, t_stack **lst_b)
+void	rrr(t_stack **lst_a, t_stack **lst_b, int is_print)
 {
 	rra(lst_a, 0);
 	rrb(lst_b, 0);
-	ft_printf("rrr\n");
+	if (is_print)
+		ft_printf("rrr\n");
 }
