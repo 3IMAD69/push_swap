@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/18 11:58:17 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 13:26:45 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,11 @@ int	main(int argc, char **argv)
 	fill_stack(str, &stack_a);
 	if (is_list_sorted(stack_a) && free_list(&stack_a))
 		return (0);
-	//print_stack(stack_a);
+	// print_stack(stack_a);
 	main_algo(&stack_a, &stack_b);
 	free_list(&stack_a);
 	//   print_stack(stack_b);
 	// printf("************************after************************\n");
 	// print_stack(stack_a);
-	//system("leaks push_swap");
+	// system("leaks push_swap");
 }

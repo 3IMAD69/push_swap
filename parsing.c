@@ -6,17 +6,22 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:41:36 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/18 13:06:10 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 13:25:20 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
-void	print_error(char *str)
+int	ft_atoi_helper(const char *str, int *i, long long *res)
 {
-	ft_putstr_fd("Error\n", 2);
-	write(2, str, ft_strlen(str));
-	exit(1);
+	while (str[*i] >= '0' && str[*i] <= '9')
+	{
+		if (*res > LLONG_MAX / 10)
+			return (1);
+		*res = ((*res) * 10) + (str[*i] - 48);
+		(*i)++;
+	}
+	return (0);
 }
 
 long long	ft_new_atoi(const char *str)
@@ -38,11 +43,8 @@ long long	ft_new_atoi(const char *str)
 	}
 	if (str[i] < '0' || str[i] > '9')
 		return (2147483650);
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = (res * 10) + (str[i] - 48);
-		i++;
-	}
+	if (ft_atoi_helper(str, &i, &res))
+		return (2147483650);
 	if (str[i])
 		return (2147483650);
 	return (res * sign);
@@ -71,7 +73,6 @@ void	check_for_error(char **str)
 	}
 	while (str[i])
 	{
-		printf("Maximum value of long long: %lld\n",ft_new_atoi(str[i]));
 		if (ft_new_atoi(str[i]) > INT_MAX || ft_new_atoi(str[i]) < INT_MIN)
 		{
 			free_tab(str);

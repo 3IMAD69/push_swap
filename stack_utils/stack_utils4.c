@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:03:35 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/17 11:44:59 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 13:28:21 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,11 @@ void	pb(t_stack **lst_a, t_stack **lst_b, int is_print)
 	push_any(lst_b, lst_a);
 	if (is_print)
 		ft_printf("pb\n");
+}
+
+void	print_error(char *str)
+{
+	ft_putstr_fd("Error\n", 2);
+	write(2, str, ft_strlen(str));
+	exit(1);
 }
