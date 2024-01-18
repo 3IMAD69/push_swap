@@ -13,7 +13,7 @@ OBJB	= ${SRCB:.c=.o}
 NAME = push_swap
 NAME_BONUS = checker
 
-CFLAGS	= -Wall -Werror -Wextra -g -fsanitize=address 
+CFLAGS	= -Wall -Werror -Wextra #-g -fsanitize=address 
 CC		= cc
 LIBFTA 	= ./includes/libft/libft.a
 

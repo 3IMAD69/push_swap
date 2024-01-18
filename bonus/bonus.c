@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:42:04 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/18 13:25:37 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 17:09:32 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void	read_and_check(t_bonus *bonus)
 
 	while (bonus->buffer)
 	{
+		printf("instuc => %s",bonus->buffer);
 		bonus->buffer[ft_strlen(bonus->buffer) - 1] = '\0';
 		instruction_index = check_if_valide_command(bonus->buffer,
 				bonus->commands);

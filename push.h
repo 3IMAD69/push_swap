@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:44:04 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/17 11:27:07 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 15:17:21 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void				add_back(t_stack **lst, t_stack *new);
 void				add_front(t_stack **lst, t_stack *new);
 int					list_size(t_stack *lst);
 int					free_list(t_stack **lst);
-void				print_stack(t_stack *lst);
 char				**allocate_str(char **argv, int argc);
 int					is_list_sorted(t_stack *lst);
 int					get_max(t_stack *lst);
