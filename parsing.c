@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:41:36 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/17 11:44:12 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 13:06:10 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	check_for_error(char **str)
 	}
 	while (str[i])
 	{
+		printf("Maximum value of long long: %lld\n",ft_new_atoi(str[i]));
 		if (ft_new_atoi(str[i]) > INT_MAX || ft_new_atoi(str[i]) < INT_MIN)
 		{
 			free_tab(str);

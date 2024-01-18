@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:39:46 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/17 11:44:23 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 11:39:10 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	main_shark_algo(t_chunk *chunk, t_stack **lst_a, t_stack **lst_b)
 		}
 		else
 			ra(lst_a, 1);
-		(*lst_a) = *lst_a;
 	}
 }
 

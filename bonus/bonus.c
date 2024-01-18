@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:42:04 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/17 13:22:13 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/18 12:16:07 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	do_the_command_on_stack(t_stack **stack_a, t_stack **stack_b,
 	else if (instruction_index == 8)
 		rra(stack_a, 0);
 	else if (instruction_index == 9)
-		rrb(stack_a, 0);
+		rrb(stack_b, 0);
 	else if (instruction_index == 10)
 		rrr(stack_a, stack_b, 0);
 }
