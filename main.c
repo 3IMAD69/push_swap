@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:05 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/18 15:15:00 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/19 11:23:58 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,5 @@ int	main(int argc, char **argv)
 		return (0);
 	main_algo(&stack_a, &stack_b);
 	free_list(&stack_a);
+	system("leaks push_swap");
 }

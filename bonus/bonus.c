@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:42:04 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/19 09:09:56 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/19 18:17:18 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,4 +118,8 @@ int	main(int argc, char **argv)
 		ft_printf("OK\n");
 	else
 		ft_printf("KO\n");
+	if (bonus.stack_a)
+		free_list(&bonus.stack_a);
+	if (bonus.stack_b)
+		free_list(&bonus.stack_b);
 }

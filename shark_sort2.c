@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:39:46 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/18 11:39:10 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/19 11:04:58 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,7 @@ void	main_shark_algo(t_chunk *chunk, t_stack **lst_a, t_stack **lst_b)
 			&& (*lst_a)->value <= chunk->sorted_arr[chunk->end])
 		{
 			pb(lst_a, lst_b, 1);
-			if (list_size((*lst_b)) && (*lst_b)->next
-				&& (*lst_b)->value < (*lst_b)->next->value)
+			if (list_size((*lst_b)) > 1 && (*lst_b)->value < (*lst_b)->next->value)
 				sb(lst_b, 1);
 			increment_chunk_size(chunk, size);
 		}

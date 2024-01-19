@@ -6,7 +6,7 @@
 /*   By: idhaimy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:39:02 by idhaimy           #+#    #+#             */
-/*   Updated: 2024/01/15 16:43:32 by idhaimy          ###   ########.fr       */
+/*   Updated: 2024/01/19 18:13:19 by idhaimy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	get_range(int size)
 		return (15);
 	else if (size <= 500)
 		return (35);
-	return (0);
+	return (45);
 }
 
 void	fill_and_sort_arr(t_chunk *chunk, t_stack **lst_a)
