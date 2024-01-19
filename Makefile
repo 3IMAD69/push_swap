@@ -22,7 +22,7 @@ all : ${NAME}
 bonus : ${NAME_BONUS}
 
 ${LIBFTA} : 
-	make -C includes/libft
+	@make -C includes/libft
 
 ${NAME} : ${OBJM} ${LIBFTA}
 	${CC} ${CFLAGS} ${OBJM} ${LIBFTA} -o ${NAME}
@@ -31,9 +31,11 @@ ${NAME_BONUS} : ${OBJB} ${LIBFTA}
 	${CC} ${CFLAGS} ${OBJB} ${LIBFTA} -o ${NAME_BONUS} 
 
 clean :
+	make -C includes/libft clean
 	rm -f ${OBJM} ${OBJB}
 
 fclean : clean
+	make -C includes/libft fclean
 	rm -f ${NAME} $(NAME_BONUS)
 
 re : fclean all
