@@ -31,28 +31,11 @@ ${NAME_BONUS} : ${OBJB} ${LIBFTA}
 	${CC} ${CFLAGS} ${OBJB} ${LIBFTA} -o ${NAME_BONUS} 
 
 clean :
-	make -C includes/libft clean
+	@make -C includes/libft clean
 	rm -f ${OBJM} ${OBJB}
 
 fclean : clean
-	make -C includes/libft fclean
+	@make -C includes/libft fclean
 	rm -f ${NAME} $(NAME_BONUS)
 
 re : fclean all
-	
-
-run :  
-	./push_swap 42 140 61 52 104 45 71 55 9 
-
-#make status arg="4 5 2"
-status : 
-	./push_swap $(arg) | ./checker_Mac $(arg)
-
-
-#make count arg="34 2 1"
-count : 
-	./push_swap $(arg) | wc -l
-
-test : 
-	make
-	bash push_swap_test.sh
